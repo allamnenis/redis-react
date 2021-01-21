@@ -1,0 +1,13 @@
+
+
+docker build .
+
+docker build -t allam/visits:latest .
+
+
+docker run redis
+
+docker run allam/visits
+
+
+
