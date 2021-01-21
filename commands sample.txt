@@ -1,0 +1,13 @@
+docker run -it -p 3000:3000 -v $(pwd):/app bd93df3500c1d8cd2df70ecf6ddbe128a8984ff31e09dcee42d7ff0859d07114
+
+
+winpty docker run -it -p 3000:3000 -v /app/npm-modules -v "/$(pwd)":/app -e CHOKIDAR_USEPOLLING=true sha256:0f11f222f43862f1bb5dd1843421b3787888d0de61414cdbb14a0a0561f24069
+
+docker run sha256:0f11f222f43862f1bb5dd1843421b3787888d0de61414cdbb14a0a0561f24069 npm run test
+
+
+docker run -it sha256:0f11f222f43862f1bb5dd1843421b3787888d0de61414cdbb14a0a0561f24069 npm run test
+
+docker ps
+
+docker exec -it eaaab09731e5efb21ff4541eff86686f73633de441bf44ab4603400edd314c22 npm run test
